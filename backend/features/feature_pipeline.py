@@ -38,8 +38,8 @@ def create_velocity_features(df):
 
     df["transaction_velocity"] = df["Amount"].rolling(5).mean()
 
-    df["transaction_velocity"].fillna(0, inplace=True)
-
+    df["transaction_velocity"] = df["transaction_velocity"].fillna(0)
+    
     return df
 
 
