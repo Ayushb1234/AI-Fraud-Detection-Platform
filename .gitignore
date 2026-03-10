@@ -1,3 +1,6 @@
 data/raw/*.csv
 data/processed/*.csv
 data/features/*.csv
+
+data/*
+!data/.gitkeep
