@@ -6,3 +6,8 @@ data/*
 !data/.gitkeep
 
 models/*.pkl
+
+mlruns/
+*.pkl
+__pycache__/
+venv/
