@@ -3,6 +3,8 @@ import pandas as pd
 import random
 import time
 
+API_URL = "https://ai-fraud-detection-platform.onrender.com/predict"
+
 st.set_page_config(page_title="Fraud Monitoring Dashboard", layout="wide")
 
 st.title("💳 Real-Time Fraud Detection Dashboard")

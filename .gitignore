@@ -5,7 +5,6 @@ data/features/*.csv
 data/*
 !data/.gitkeep
 
-models/*.pkl
 
 mlruns/
 *.pkl
