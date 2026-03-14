@@ -1,0 +1,34 @@
+version: "3.8"
+
+services:
+
+  fraud-api:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    container_name: fraud-api
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+
+  dashboard:
+    image: python:3.10-slim
+    container_name: fraud-dashboard
+    working_dir: /app
+    volumes:
+      - .:/app
+    command: streamlit run monitoring/dashboard.py --server.port 8501 --server.address 0.0.0.0
+    ports:
+      - "8501:8501"
+    depends_on:
+      - fraud-api
+
+  simulator:
+    image: python:3.10-slim
+    container_name: fraud-simulator
+    working_dir: /app
+    volumes:
+      - .:/app
+    command: python scripts/transaction_simulator.py
+    depends_on:
+      - fraud-api
