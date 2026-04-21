@@ -1,4 +1,3 @@
-Live Deployment: https://ai-fraud-detection-platform-1.onrender.com/
 
 # AI Fraud Detection Platform
 
@@ -13,6 +12,9 @@ A production-style **real-time fraud detection system** built with an end-to-end
 ---
 
 ## Live Deployment
+
+**Live Deployment: https://ai-fraud-detection-platform-1.onrender.com/
+
 
 **Frontend Dashboard:** https://ai-fraud-detection-platform-1.onrender.com/  
 
